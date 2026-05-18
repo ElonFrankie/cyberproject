@@ -7,5 +7,6 @@ netscansth.sh
 chmod 744 netscansth.sh
 chmod +x netscansth.sh 
 dos2unix netscansth.sh //change the fomart of file to linux from windows
+sudo apt install dos2unix -y
 sudo ./netscansth.sh
 
