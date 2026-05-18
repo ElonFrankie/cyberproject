@@ -10,3 +10,13 @@ dos2unix netscansth.sh //change the fomart of file to linux from windows
 sudo apt install dos2unix -y
 sudo ./netscansth.sh
 
+sudo nmap -sS -A -Pn -F 10.30.0.250
+
+VS code how to comment a large block lines:
+: << 'COMMENT'
+这里是你想注释掉的第一行代码 nmap -sS ...
+这里是你想注释掉的第二行代码 gobuster ...
+这里是你想注释掉的第三行代码 echo "Testing"
+COMMENT
+
+
