@@ -1,0 +1,40 @@
+sudo ./netscansth.sh                                                              
+[sudo] password for kali: 
+Enter IP range to scan (e.g. 192.168.1.0/24): 10.30.0.0/24
+
+============================================================
+  Low-noise SYN scan → 10.30.0.0/24                                                                                              
+============================================================                                                                     
+[*] Running SYN scan with slower timing and randomized host order
+
+Host is up (0.00037s latency).
+Host is up (0.00033s latency).
+
+
+============================================================
+  Found 1 HTTP host(s)                                                                                                           
+============================================================                                                                     
+
+------------------------------------------------------------
+  Targeted follow-up scan → 10.30.0.250                                                                                          
+------------------------------------------------------------                                                                     
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-18 09:22 EDT
+Nmap scan report for 10.30.0.250
+Host is up (0.00054s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp closed https
+
+Nmap done: 1 IP address (1 host up) scanned in 0.89 seconds
+
+------------------------------------------------------------
+  Gobuster → http://10.30.0.250                                                                                                  
+------------------------------------------------------------                                                                     
+[*] Using reduced thread count and delayed requests
+
+[*] (no directories/files found)
+
+************************************************************
+  Scan complete                                                                                                                  
+************************************************************   
