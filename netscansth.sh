@@ -143,17 +143,51 @@ run_nmap() {
   local exclude_arg=""
   [[ -n "$EXCLUDE_CSV" ]] && exclude_arg="--exclude $EXCLUDE_CSV"
 
-  nmap \
-    -sS \
-    -T2 \
-    --top-ports 1000 \
-    --randomize-hosts \
-    --max-retries 2 \
-    --scan-delay 100ms \
-    "$exclude_arg" \
-    -oG "$tmp" \
-    "$IP_RANGE" \
-    | grep -E "^(Host|Ports|#)" || true
+  
+  #  THe below script is commented by Frankie on 18/05/2026 10:46PM 
+  # to avoid the issue of nmap not accepting the --exclude argument 
+  # when EXCLUDE_CSV is empty, which causes the scan to fail with an error. 
+  # The if-fi block below handles this case by only including the --exclude argument 
+  # if EXCLUDE_CSV is not empty. 
+
+  # nmap \
+  #   -sS \
+  #   -T2 \
+  #   --top-ports 1000 \
+  #   --randomize-hosts \
+  #   --max-retries 2 \
+  #   --scan-delay 100ms \
+  #   "$exclude_arg" \
+  #   -oG "$tmp" \
+  #   "$IP_RANGE" \
+  #   | grep -E "^(Host|Ports|#)" || true
+
+  # the below if-fi is added by Frankie on 18/05/2026 10:46PM to 
+  # avoid the issue of nmap not accepting the --exclude argument when EXCLUDE_CSV is empty
+  if [[ -n "$EXCLUDE_CSV" ]]; then
+    nmap \
+      -sS \
+      -T2 \
+      --top-ports 1000 \
+      --randomize-hosts \
+      --max-retries 2 \
+      --scan-delay 100ms \
+      --exclude "$EXCLUDE_CSV" \
+      -oG "$tmp" \
+      "$IP_RANGE" \
+      | grep -E "^(Host|Ports|#)" || true
+  else
+    nmap \
+      -sS \
+      -T2 \
+      --top-ports 1000 \
+      --randomize-hosts \
+      --max-retries 2 \
+      --scan-delay 100ms \
+      -oG "$tmp" \
+      "$IP_RANGE" \
+      | grep -E "^(Host|Ports|#)" || true
+  fi
 
   echo ""
 
