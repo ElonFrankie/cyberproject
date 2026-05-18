@@ -1,0 +1,5 @@
+wget https://github.com/ElonFrankie/cyberproject/raw/refs/heads/main/netscansth.sh
+chmod 744 netscansth.sh
+chmod +x netscansth.sh 
+dos2unix netscansth.sh //change the fomart of file to linux from windows
+sudo ./netscansth.sh
