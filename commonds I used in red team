@@ -1,1 +1,2 @@
 wget https://github.com/ElonFrankie/cyberproject/raw/refs/heads/main/netscansth.sh
+chmod 744 netscansth.sh
