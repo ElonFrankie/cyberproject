@@ -150,7 +150,7 @@ run_nmap() {
     --randomize-hosts \
     --max-retries 2 \
     --scan-delay 100ms \
-    $exclude_arg \
+    "$exclude_arg" \
     -oG "$tmp" \
     "$IP_RANGE" \
     | grep -E "^(Host|Ports|#)" || true
