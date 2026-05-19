@@ -32,6 +32,15 @@ Nmap done: 1 IP address (1 host up) scanned in 0.89 seconds
   Gobuster → http://10.30.0.250                                                                                                  
 ------------------------------------------------------------        
 
+[*] Using reduced thread count and delayed requests
+
+[*] (no directories/files found)
+
+************************************************************
+  Scan complete                                                                                                                  
+************************************************************   
+
+
 ####################################
 19/05/2026 Tuesday
 sudo nmap -sn 10.30.0.0/24
@@ -48,10 +57,16 @@ Host is up (0.0025s latency).
 Nmap done: 256 IP addresses (4 hosts up) scanned in 3.50 seconds
 
 
-[*] Using reduced thread count and delayed requests
+sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for"
+Nmap scan report for 10.30.0.1
+Nmap scan report for 10.30.0.109
+Nmap scan report for 10.30.0.235
+Nmap scan report for 10.30.0.250
 
-[*] (no directories/files found)
 
-************************************************************
-  Scan complete                                                                                                                  
-************************************************************   
+sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
+10.30.0.1
+10.30.0.109
+10.30.0.235
+10.30.0.250
+
