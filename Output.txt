@@ -108,3 +108,27 @@ Not shown: 2001 closed tcp ports (reset)
 Nmap done: 3 IP addresses (3 hosts up) scanned in 1.36 seconds
 
 ##################################################################
+
+nmap -sV -p 21 10.30.0.235
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-18 22:04 EDT
+Nmap scan report for 10.30.0.235
+Host is up (0.00070s latency).
+
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.45 seconds
+                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ telnet 10.30.0.235 21
+Trying 10.30.0.235...
+Connected to 10.30.0.235.
+Escape character is '^]'.
+220 (vsFTPd 2.3.4)
+USER frankie:)
+331 Please specify the password.
+PASS123
+530 Please login with USER and PASS.
+
