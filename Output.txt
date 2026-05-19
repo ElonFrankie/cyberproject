@@ -70,3 +70,41 @@ sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
 10.30.0.235
 10.30.0.250
 
+#################################################################################
+sudo nmap -sS -Pn -p 1-1000,3000-4000 10.30.0.235 10.30.0.109 10.30.0.250  
+[sudo] password for kali: 
+Sorry, try again.
+[sudo] password for kali: 
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-18 20:54 EDT
+Nmap scan report for 10.30.0.235
+Host is up (0.0019s latency).
+Not shown: 1987 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+3306/tcp open  mysql
+3632/tcp open  distccd
+
+Nmap scan report for 10.30.0.109
+Host is up (0.0056s latency).
+All 2001 scanned ports on 10.30.0.109 are in ignored states.
+Not shown: 2001 closed tcp ports (reset)
+
+Nmap scan report for 10.30.0.250
+Host is up (0.0056s latency).
+All 2001 scanned ports on 10.30.0.250 are in ignored states.
+Not shown: 2001 closed tcp ports (reset)
+
+Nmap done: 3 IP addresses (3 hosts up) scanned in 1.36 seconds
+
+##################################################################
