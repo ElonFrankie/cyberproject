@@ -19,4 +19,8 @@ VS code how to comment a large block lines:
 这里是你想注释掉的第三行代码 echo "Testing"
 COMMENT
 
+####################################
+19/05/2026 Tuesday
+sudo nmap -sn 10.30.0.0/24
+
 
