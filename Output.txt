@@ -30,7 +30,24 @@ Nmap done: 1 IP address (1 host up) scanned in 0.89 seconds
 
 ------------------------------------------------------------
   Gobuster → http://10.30.0.250                                                                                                  
-------------------------------------------------------------                                                                     
+------------------------------------------------------------        
+
+####################################
+19/05/2026 Tuesday
+sudo nmap -sn 10.30.0.0/24
+[sudo] password for kali: 
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-18 20:09 EDT
+Nmap scan report for 10.30.0.1
+Host is up (0.00031s latency).
+Nmap scan report for 10.30.0.109
+Host is up (0.00068s latency).
+Nmap scan report for 10.30.0.235
+Host is up (0.00084s latency).
+Nmap scan report for 10.30.0.250
+Host is up (0.0025s latency).
+Nmap done: 256 IP addresses (4 hosts up) scanned in 3.50 seconds
+
+
 [*] Using reduced thread count and delayed requests
 
 [*] (no directories/files found)
