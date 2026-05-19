@@ -22,5 +22,4 @@ COMMENT
 ####################################
 19/05/2026 Tuesday
 sudo nmap -sn 10.30.0.0/24
-
-
+sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
