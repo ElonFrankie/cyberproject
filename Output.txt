@@ -1,90 +1,187 @@
 ┌──(kali㉿kali)-[~]
-└─$ ip a
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute 
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether bc:24:11:82:06:e6 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.119/24 brd 192.168.1.255 scope global dynamic noprefixroute eth0
-       valid_lft 7183sec preferred_lft 7183sec
-    inet6 fe80::6f50:722f:67c0:f523/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
+└─$ sudo ./network_scan.sh
+Please enter the target network (e.g., 192.168.1.0/24):
+10.30.0.0/24
+Starting device scan on 10.30.0.0/24...
+Found 4 live hosts. Saving to live_hosts_2026-05-21_07-07-32.txt.
+Starting Nmap stealth scans in parallel...
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-21 07:07 EDT
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-21 07:07 EDT
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-21 07:07 EDT
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-21 07:07 EDT
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+Nmap scan report for 10.30.0.250
+Host is up (0.013s latency).
+All 2001 scanned ports on 10.30.0.250 are in ignored states.
+Nmap scan report for 10.30.0.109
+Host is up (0.013s latency).
+All 2001 scanned ports on 10.30.0.109 are in ignored states.
+Not shown: 2001 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Not shown: 2001 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.41 seconds
 
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.41 seconds
+Nmap scan report for 10.30.0.1
+Host is up (0.00051s latency).
+Not shown: 1997 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9 (protocol 2.0)
+53/tcp   open  domain  Unbound
+80/tcp   open  http    nginx
+3000/tcp open  http    Mongoose httpd
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 11.X (97%)
+OS CPE: cpe:/o:freebsd:freebsd:11.2
+Aggressive OS guesses: FreeBSD 11.2-RELEASE (97%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.94 seconds
+Nmap scan report for 10.30.0.235
+Host is up (0.0088s latency).
+Not shown: 1987 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet?
+25/tcp   open  smtp?
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec?
+513/tcp  open  login?
+514/tcp  open  shell?
+3306/tcp open  mysql?
+3632/tcp open  distccd     distccd v1 ((GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4))
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 168.23 seconds
+All scans completed. Nmap results are stored in nmap_scans_2026-05-21_07-07-32/
+All scans completed. Nmap results are stored in nmap_scans_2026-05-21_07-07-32/
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ──(kali㉿kali)-[~]
-└─$ sudo nmap -sn 192.168.1.0/24
-[sudo] password for kali: 
-Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-21 05:33 EDT
-Nmap scan report for 192.168.1.1
-Host is up (0.00024s latency).
-MAC Address: 00:50:56:9D:91:57 (VMware)
-Nmap scan report for 192.168.1.113
-Host is up (0.00013s latency).
-MAC Address: BC:24:11:09:97:CC (Proxmox Server Solutions GmbH)
-Nmap scan report for 192.168.1.120
-Host is up (0.00024s latency).
-MAC Address: BC:24:11:68:4A:D4 (Proxmox Server Solutions GmbH)
-Nmap scan report for 192.168.1.121
-Host is up (0.00022s latency).
-MAC Address: BC:24:11:86:12:A6 (Proxmox Server Solutions GmbH)
-Nmap scan report for 192.168.1.122
-Host is up (0.00023s latency).
-MAC Address: BC:24:11:08:5E:AF (Proxmox Server Solutions GmbH)
-Nmap scan report for 192.168.1.119
-Host is up.
-Nmap done: 256 IP addresses (6 hosts up) scanned in 1.84 seconds
+└─$ ls
+Desktop    Downloads                           Music            nmap_scans_2026-05-21_07-07-32  Public     Videos
+Documents  live_hosts_2026-05-21_07-07-32.txt  network_scan.sh  Pictures                        Templates
                                                                                                                                   
 ┌──(kali㉿kali)-[~]
+└─$ cat live_hosts_2026-05-21_07-07-32.txt
+10.30.0.1
+10.30.0.109
+10.30.0.235
+10.30.0.250
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+──(kali㉿kali)-[~]
+└─$ cd nmap_scans_2026-05-21_07-07-32     
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
+└─$ ls
+nmap_scan_10.30.0.109.txt  nmap_scan_10.30.0.1.txt  nmap_scan_10.30.0.235.txt  nmap_scan_10.30.0.250.txt
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
+└─$ cat nmap_scan_10.30.0.109.txt         
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+# Nmap 7.95 scan initiated Thu May 21 07:07:36 2026 as: /usr/lib/nmap/nmap -n -p 1-1000,3000-4000 -D 192.168.0.114,192.168.0.115,192.168.0.116,192.168.0.117,192.168.0.118,ME --spoof-mac 00:50:56:9D:3C:C6 -sS -sV -O --host-timeout 5m -oN nmap_scans_2026-05-21_07-07-32/nmap_scan_10.30.0.109.txt 10.30.0.109
+Nmap scan report for 10.30.0.109
+Host is up (0.013s latency).
+All 2001 scanned ports on 10.30.0.109 are in ignored states.
+Not shown: 2001 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 21 07:07:40 2026 -- 1 IP address (1 host up) scanned in 4.41 seconds
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
+└─$ cat nmap_scan_10.30.0.1.txt  
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+# Nmap 7.95 scan initiated Thu May 21 07:07:36 2026 as: /usr/lib/nmap/nmap -n -p 1-1000,3000-4000 -D 192.168.0.114,192.168.0.115,192.168.0.116,192.168.0.117,192.168.0.118,ME --spoof-mac 00:50:56:9D:3C:C6 -sS -sV -O --host-timeout 5m -oN nmap_scans_2026-05-21_07-07-32/nmap_scan_10.30.0.1.txt 10.30.0.1
+Nmap scan report for 10.30.0.1
+Host is up (0.00051s latency).
+Not shown: 1997 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9 (protocol 2.0)
+53/tcp   open  domain  Unbound
+80/tcp   open  http    nginx
+3000/tcp open  http    Mongoose httpd
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 11.X (97%)
+OS CPE: cpe:/o:freebsd:freebsd:11.2
+Aggressive OS guesses: FreeBSD 11.2-RELEASE (97%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 21 07:07:54 2026 -- 1 IP address (1 host up) scanned in 17.94 seconds
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
+└─$ cat nmap_scan_10.30.0.235.txt
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+# Nmap 7.95 scan initiated Thu May 21 07:07:36 2026 as: /usr/lib/nmap/nmap -n -p 1-1000,3000-4000 -D 192.168.0.114,192.168.0.115,192.168.0.116,192.168.0.117,192.168.0.118,ME --spoof-mac 00:50:56:9D:3C:C6 -sS -sV -O --host-timeout 5m -oN nmap_scans_2026-05-21_07-07-32/nmap_scan_10.30.0.235.txt 10.30.0.235
+Nmap scan report for 10.30.0.235
+Host is up (0.0088s latency).
+Not shown: 1987 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet?
+25/tcp   open  smtp?
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec?
+513/tcp  open  login?
+514/tcp  open  shell?
+3306/tcp open  mysql?
+3632/tcp open  distccd     distccd v1 ((GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4))
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 21 07:10:24 2026 -- 1 IP address (1 host up) scanned in 168.23 seconds
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
+└─$ cat nmap_scan_10.30.0.250.txt
+Spoofing MAC address 00:50:56:9D:3C:C6 (VMware)
+# Nmap 7.95 scan initiated Thu May 21 07:07:36 2026 as: /usr/lib/nmap/nmap -n -p 1-1000,3000-4000 -D 192.168.0.114,192.168.0.115,192.168.0.116,192.168.0.117,192.168.0.118,ME --spoof-mac 00:50:56:9D:3C:C6 -sS -sV -O --host-timeout 5m -oN nmap_scans_2026-05-21_07-07-32/nmap_scan_10.30.0.250.txt 10.30.0.250
+Nmap scan report for 10.30.0.250
+Host is up (0.013s latency).
+All 2001 scanned ports on 10.30.0.250 are in ignored states.
+Not shown: 2001 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 21 07:07:40 2026 -- 1 IP address (1 host up) scanned in 4.41 seconds
+                                                                                                                                  
+┌──(kali㉿kali)-[~/nmap_scans_2026-05-21_07-07-32]
 └─$ 
-**********************************
-
-──(kali㉿kali)-[~]
-└─$ ip route
-default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.119 metric 100 
-192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.119 metric 100 
-                                                                                                                                 
-┌──(kali㉿kali)-[~]
-└─$ route -n
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.1.1     0.0.0.0         UG    100    0        0 eth0
-192.168.1.0     0.0.0.0         255.255.255.0   U     100    0        0 eth0
 
 
-──(kali㉿kali)-[~]
-└─$ cat /etc/resolv.conf          
-# Generated by NetworkManager
-search home.arpa
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-
-
-──(kali㉿kali)-[~]
-└─$ sudo tcpdump -i eth0 -n -c 50
-tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
-listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
-05:43:03.144676 IP6 fe80::165e:7d12:4848:5469 > ff02::2: ICMP6, router solicitation, length 8
-05:43:26.085582 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [P.], seq 4000697189:4000697215, ack 3519438711, win 73, options [nop,nop,TS val 934619018 ecr 1769695136], length 26
-05:43:26.085807 IP 192.168.1.119.36002 > 140.82.112.25.443: Flags [P.], seq 1:31, ack 26, win 509, options [nop,nop,TS val 1769755133 ecr 934619018], length 30
-05:43:26.336298 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [.], ack 31, win 73, options [nop,nop,TS val 934619268 ecr 1769755133], length 0
-05:43:31.112926 ARP, Request who-has 192.168.1.1 tell 192.168.1.119, length 28
-05:43:31.113195 ARP, Reply 192.168.1.1 is-at 00:50:56:9d:91:57, length 28
-05:44:12.402867 IP6 fe80::4ccf:e3de:b122:c6b7 > ff02::2: ICMP6, router solicitation, length 8
-05:44:26.085868 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [P.], seq 26:52, ack 31, win 73, options [nop,nop,TS val 934679018 ecr 1769755133], length 26
-05:44:26.086024 IP 192.168.1.119.36002 > 140.82.112.25.443: Flags [P.], seq 31:61, ack 52, win 509, options [nop,nop,TS val 1769815134 ecr 934679018], length 30
-05:44:26.336497 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [.], ack 61, win 73, options [nop,nop,TS val 934679269 ecr 1769815134], length 0
-05:44:31.276909 ARP, Request who-has 192.168.1.1 tell 192.168.1.119, length 28
-05:44:31.277091 ARP, Reply 192.168.1.1 is-at 00:50:56:9d:91:57, length 28
-05:45:26.086072 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [P.], seq 52:78, ack 61, win 73, options [nop,nop,TS val 934739018 ecr 1769815134], length 26
-05:45:26.086297 IP 192.168.1.119.36002 > 140.82.112.25.443: Flags [P.], seq 61:91, ack 78, win 509, options [nop,nop,TS val 1769875134 ecr 934739018], length 30
-05:45:26.336728 IP 140.82.112.25.443 > 192.168.1.119.36002: Flags [.], ack 91, win 73, options [nop,nop,TS val 934739269 ecr 1769875134], length 0
-05:45:31.176938 ARP, Request who-has 192.168.1.1 tell 192.168.1.119, length 28
-05:45:31.177157 ARP, Reply 192.168.1.1 is-at 00:50:56:9d:91:57, length 28
-^C
-17 packets captured
-17 packets received by filter
-0 packets dropped by kernel
