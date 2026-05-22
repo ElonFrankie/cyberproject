@@ -25,9 +25,11 @@ COMMENT
 sudo nmap -sn 10.30.0.0/24
 sudo nmap -sn 10.30.0.0/24 | grep "Nmap scan report for" | awk '{print $5}'
 
+# couldn not use this command, it scans all ports: 65535 and make all the vm down
+# sudo nmap -Pn -p- --min-rate 2000 -sS -sV -O -v -oA deep_scan_results 10.30.0.1,109,235,236,237,250
 
-sudo nmap -Pn -p- --min-rate 2000 -sS -sV -O -v -oA deep_scan_results 10.30.0.1,109,235,236,237,250
-
+#this command only scan 2000-3000 ports
+sudo nmap -Pn -p 2000-3000 -sS -sV -O -F --max-retries 1 -v -oN mid_port_scan.txt 10.30.0.1,109,235,236,237,250
 
 
 20/05/2026:
