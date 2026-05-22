@@ -1,0 +1,19 @@
+# Nmap 7.95 scan initiated Fri May 22 02:49:29 2026 as: /usr/lib/nmap/nmap -Pn -p 2001-3000 -sS -sV -O --max-retries 1 -v -oN scan_10.30.0.235_p2001-3000_20260522_024929.txt 10.30.0.235
+Nmap scan report for 10.30.0.235
+Host is up (0.00081s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+2049/tcp open  nfs          2-4 (RPC #100003)
+2121/tcp open  ccproxy-ftp?
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
+Uptime guess: 0.030 days (since Fri May 22 02:08:29 2026)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=202 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 22 02:52:08 2026 -- 1 IP address (1 host up) scanned in 159.07 seconds
