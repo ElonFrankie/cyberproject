@@ -46,10 +46,23 @@ ports="1-1000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.
 
 ports="1001-2000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
+ports="2001-3000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
+ports="3001-4000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
+ports="4001-5000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
+ports="5001-6000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
+ports="6001-7000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="7001-8000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="8001-9000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="1001-2000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
+
+ports="9001-10000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.30.0.237 10.30.0.250; do sudo nmap -Pn -p "$ports" -sS -sV -O --max-retries 1 -v -oN "scan_${ip}_p${ports}_$(date +%Y%m%d_%H%M%S).txt" "$ip"; done
 
 
 
