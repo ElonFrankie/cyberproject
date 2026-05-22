@@ -1,0 +1,11 @@
+# Nmap 7.95 scan initiated Fri May 22 07:11:03 2026 as: /usr/lib/nmap/nmap -Pn -p 9001-10000 -sS -sV -O --max-retries 1 -v -oN scan_10.30.0.235_p9001-10000_20260522_071103.txt 10.30.0.235
+Nmap scan report for 10.30.0.235
+Host is up (0.00074s latency).
+All 1000 scanned ports on 10.30.0.235 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 22 07:11:07 2026 -- 1 IP address (1 host up) scanned in 3.79 seconds

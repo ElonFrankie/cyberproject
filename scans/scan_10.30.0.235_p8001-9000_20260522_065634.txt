@@ -1,0 +1,20 @@
+# Nmap 7.95 scan initiated Fri May 22 06:56:34 2026 as: /usr/lib/nmap/nmap -Pn -p 8001-9000 -sS -sV -O --max-retries 1 -v -oN scan_10.30.0.235_p8001-9000_20260522_065634.txt 10.30.0.235
+Nmap scan report for 10.30.0.235
+Host is up (0.00060s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+8180/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1
+8787/tcp open  drb     Ruby DRb RMI (Ruby 1.8; path /usr/lib/ruby/1.8/drb)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
+Uptime guess: 0.049 days (since Fri May 22 05:47:45 2026)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=204 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 22 06:57:55 2026 -- 1 IP address (1 host up) scanned in 81.58 seconds
