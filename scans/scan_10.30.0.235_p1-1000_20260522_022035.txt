@@ -1,0 +1,30 @@
+# Nmap 7.95 scan initiated Fri May 22 02:20:35 2026 as: /usr/lib/nmap/nmap -Pn -p 1-1000 -sS -sV -O --max-retries 1 -v -oN scan_10.30.0.235_p1-1000_20260522_022035.txt 10.30.0.235
+Nmap scan report for 10.30.0.235
+Host is up (0.00056s latency).
+Not shown: 988 closed tcp ports (reset)
+PORT    STATE SERVICE     VERSION
+21/tcp  open  ftp         vsftpd 2.3.4
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp  open  telnet?
+25/tcp  open  smtp?
+53/tcp  open  domain      ISC BIND 9.4.2
+80/tcp  open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp open  rpcbind     2 (RPC #100000)
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp open  exec?
+513/tcp open  login?
+514/tcp open  shell?
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
+Uptime guess: 0.010 days (since Fri May 22 02:08:29 2026)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=206 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 22 02:23:23 2026 -- 1 IP address (1 host up) scanned in 167.55 seconds
