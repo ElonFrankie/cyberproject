@@ -92,3 +92,10 @@ nmap -sT -O 10.30.0.0/24
 # 这个命令列出所有当前网络的alive host， opened ports and OS info
 
 sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -A 15 "Host is up"
+#这个命令会漏掉第一个host 和最后一个 host 的ip
+
+sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -E "Nmap scan report|Host is up|PORT|tcp" -A 4
+
+sudo nmap -sS -sV --version-intensity 0 -T3 --open 10.30.0.0/24
+
+
