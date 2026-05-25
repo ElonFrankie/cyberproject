@@ -91,4 +91,4 @@ sudo nmap -sP 10.30.0.0/24 -oG - | grep -i "Up"
 nmap -sT -O 10.30.0.0/24
 # 这个命令列出所有当前网络的alive host， opened ports and OS info
 
-
+sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -A 15 "Host is up"
