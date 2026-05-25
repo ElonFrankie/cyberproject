@@ -102,7 +102,7 @@ sudo nmap -sS -sV --version-intensity 0 -T3 --open 10.30.0.0/24
 #26/05/2026
 sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -E "Nmap scan report|Host is up|PORT|tcp|All.*scanned" -A 1
 
-
+sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 -oG - | grep -v "Status: Down"
 
 
 
