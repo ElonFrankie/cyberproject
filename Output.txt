@@ -1,98 +1,47 @@
 ┌──(kali㉿kali)-[~]
-└─$ nmap -sT -O 10.30.0.0/24                                
-Starting Nmap 7.95 ( https://nmap.org ) at 2026-05-24 22:44 EDT
-Nmap scan report for 10.30.0.1
-Host is up (0.00025s latency).
+└─$ sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -A 15 "Host is up"
+
+[sudo] password for kali: 
+Host is up (0.00036s latency).
 Not shown: 996 filtered tcp ports (no-response)
-PORT     STATE SERVICE
-22/tcp   open  ssh
-53/tcp   open  domain
-80/tcp   open  http
-3000/tcp open  ppp
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
-Device type: general purpose
-Running (JUST GUESSING): FreeBSD 11.X (97%)
-OS CPE: cpe:/o:freebsd:freebsd:11.2
-Aggressive OS guesses: FreeBSD 11.2-RELEASE (97%)
-No exact OS matches for host (test conditions non-ideal).
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9 (protocol 2.0)
+53/tcp   open  domain  Unbound
+80/tcp   open  http    nginx
+3000/tcp open  http    Mongoose httpd
 
-Nmap scan report for 10.30.0.102
-Host is up (0.0011s latency).
-Not shown: 990 closed tcp ports (conn-refused)
-PORT      STATE SERVICE
-135/tcp   open  msrpc
-139/tcp   open  netbios-ssn
-445/tcp   open  microsoft-ds
-3389/tcp  open  ms-wbt-server
-49152/tcp open  unknown
-49153/tcp open  unknown
-49154/tcp open  unknown
-49155/tcp open  unknown
-49156/tcp open  unknown
-49157/tcp open  unknown
-Device type: general purpose
-Running: Microsoft Windows 2008|7|Vista
-OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1
-OS details: Microsoft Windows 7 or Windows Server 2008 R2, Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7, Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008
-Network Distance: 2 hops
-
-Nmap scan report for 10.30.0.109
-Host is up (0.0035s latency).
-All 1000 scanned ports on 10.30.0.109 are in ignored states.
-Not shown: 1000 closed tcp ports (conn-refused)
-Too many fingerprints match this host to give specific OS details
-Network Distance: 2 hops
+Nmap scan report for 10.30.0.101
+Host is up (0.0030s latency).
+All 1000 scanned ports on 10.30.0.101 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
 
 Nmap scan report for 10.30.0.235
-Host is up (0.0027s latency).
-Not shown: 977 closed tcp ports (conn-refused)
-PORT     STATE SERVICE
-21/tcp   open  ftp
-22/tcp   open  ssh
-23/tcp   open  telnet
-25/tcp   open  smtp
-53/tcp   open  domain
-80/tcp   open  http
+Host is up (0.0034s latency).
+Not shown: 978 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          vsftpd 2.3.4
+22/tcp   open  ssh          OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet?
+25/tcp   open  smtp?
+53/tcp   open  domain       ISC BIND 9.4.2
+80/tcp   open  http         Apache httpd 2.2.8 ((Ubuntu) DAV/2)
 111/tcp  open  rpcbind
-139/tcp  open  netbios-ssn
-445/tcp  open  microsoft-ds
-512/tcp  open  exec
-513/tcp  open  login
-514/tcp  open  shell
-1099/tcp open  rmiregistry
-1524/tcp open  ingreslock
-2049/tcp open  nfs
-2121/tcp open  ccproxy-ftp
-3306/tcp open  mysql
-5432/tcp open  postgresql
-5900/tcp open  vnc
-6000/tcp open  X11
-6667/tcp open  irc
-8009/tcp open  ajp13
-8180/tcp open  unknown
-Device type: general purpose
-Running: Linux 2.6.X
-OS CPE: cpe:/o:linux:linux_kernel:2.6
-OS details: Linux 2.6.15 - 2.6.26 (likely embedded), Linux 2.6.20 - 2.6.24
-Network Distance: 2 hops
+139/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec?
+513/tcp  open  login?
+514/tcp  open  shell?
+1099/tcp open  java-rmi     GNU Classpath grmiregistry
+--
+Host is up (0.0014s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+2222/tcp open  ssh     OpenSSH 10.0p2 Debian 7 (protocol 2.0)
+8080/tcp open  http    Apache httpd 2.4.53 ((Debian))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
-Nmap scan report for 10.30.0.250
-Host is up (0.0018s latency).
-Not shown: 998 closed tcp ports (conn-refused)
-PORT     STATE SERVICE
-2222/tcp open  EtherNetIP-1
-8080/tcp open  http-proxy
-Device type: general purpose
-Running: Linux 4.X
-OS CPE: cpe:/o:linux:linux_kernel:4
-OS details: Linux 4.19 - 5.15
-Network Distance: 2 hops
-
-OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 256 IP addresses (5 hosts up) scanned in 11.93 seconds
-                                                                                                                                 
-┌──(kali㉿kali)-[~]
-└─$ nmap -sT -O 10.30.0.0/24 | grep -A 25 "appears to be up"
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 34.72 seconds
                                                                                                                                  
 ┌──(kali㉿kali)-[~]
 └─$ 
