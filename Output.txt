@@ -45,3 +45,14 @@ Nmap done: 256 IP addresses (4 hosts up) scanned in 34.72 seconds
                                                                                                                                  
 ┌──(kali㉿kali)-[~]
 └─$ 
+
+[sudo] password for msfadmin: 
+Chain INPUT (policy ACCEPT 9473 packets, 801K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 9353 packets, 767K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+msfadmin@metasploitable:~$ 
