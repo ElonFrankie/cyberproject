@@ -107,13 +107,14 @@ sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 -oG - | grep -v "Status
 #this command lsits all hosts u and their opened ports even if it's no port opend, but the format is uneven.
 
 蓝队反制命令：
+监控：
 sudo tcpdump -i eth0 -n "tcp[tcpflags] & (tcp-syn|tcp-rst) != 0" -c 100
 
 ss -antp | grep -E "SYN-RECV|ESTAB"
-
+#下面是老版本的命令
 netstat -antp | grep "SYN_RECV"
 
-
+防御：让对方的namp 命令失效
 sudo iptables -A INPUT -p tcp --syn -m state --state NEW -m recent --set
 sudo iptables -A INPUT -p tcp --syn -m state --state NEW -m recent --update --seconds 10 --hitcount 5 -j DROP
 
