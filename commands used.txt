@@ -7,6 +7,8 @@ wget -O flag.sh "https://raw.githubusercontent.com/ElonFrankie/cyberproject/refs
 chmod + flag.sh
 sudo ./flag.sh
 
+wget -O flag.sh "https://raw.githubusercontent.com/ascurrah/netlabs/refs/heads/main/flag.sh?v=1"
+
 netscansth.sh
 chmod 744 netscansth.sh
 chmod +x netscansth.sh 
