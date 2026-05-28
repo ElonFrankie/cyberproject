@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# !/usr/bin/env bash
+# https://raw.githubusercontent.com/ElonFrankie/cyberproject/refs/heads/main/flag.sh
 # ============================================================
 #  IRTx Day — Guided Attack Chain Script
 #  Target network: LANDMZ  10.30.0.0/24
