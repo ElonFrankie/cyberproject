@@ -3,6 +3,9 @@ rm -f netscansth.sh*
 wget https://github.com/ElonFrankie/cyberproject/raw/refs/heads/main/
 wget -O netscansth.sh "https://github.com/ElonFrankie/cyberproject/raw/refs/heads/main/netscansth.sh?v=1"
 wget -O network_scan.sh "https://raw.githubusercontent.com/Tafeman77/cyberproject/refs/heads/main/network_scan.sh?v=1"
+wget -O flag.sh "# https://raw.githubusercontent.com/ElonFrankie/cyberproject/refs/heads/main/flag.sh?v=1"
+chmod + flag.sh
+sudo ./flag.sh
 
 netscansth.sh
 chmod 744 netscansth.sh
