@@ -1,60 +1,19 @@
-┌──(kali㉿kali)-[~]
-└─$ sudo nmap -sS -sV --version-intensity 0 -T3 10.30.0.0/24 | grep -A 15 "Host is up"
-
-[sudo] password for kali: 
-Host is up (0.00036s latency).
-Not shown: 996 filtered tcp ports (no-response)
-PORT     STATE SERVICE VERSION
-22/tcp   open  ssh     OpenSSH 7.9 (protocol 2.0)
-53/tcp   open  domain  Unbound
-80/tcp   open  http    nginx
-3000/tcp open  http    Mongoose httpd
-
-Nmap scan report for 10.30.0.101
-Host is up (0.0030s latency).
-All 1000 scanned ports on 10.30.0.101 are in ignored states.
-Not shown: 1000 closed tcp ports (reset)
-
+nmap -sV -p 6200 10.30.0.235
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-06-01 01:44 EDT
 Nmap scan report for 10.30.0.235
-Host is up (0.0034s latency).
-Not shown: 978 closed tcp ports (reset)
-PORT     STATE SERVICE      VERSION
-21/tcp   open  ftp          vsftpd 2.3.4
-22/tcp   open  ssh          OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
-23/tcp   open  telnet?
-25/tcp   open  smtp?
-53/tcp   open  domain       ISC BIND 9.4.2
-80/tcp   open  http         Apache httpd 2.2.8 ((Ubuntu) DAV/2)
-111/tcp  open  rpcbind
-139/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
-445/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
-512/tcp  open  exec?
-513/tcp  open  login?
-514/tcp  open  shell?
-1099/tcp open  java-rmi     GNU Classpath grmiregistry
---
-Host is up (0.0014s latency).
-Not shown: 998 closed tcp ports (reset)
+Host is up (0.00061s latency).
+
 PORT     STATE SERVICE VERSION
-2222/tcp open  ssh     OpenSSH 10.0p2 Debian 7 (protocol 2.0)
-8080/tcp open  http    Apache httpd 2.4.53 ((Debian))
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+6200/tcp open  lm-x?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port6200-TCP:V=7.95%I=7%D=6/1%Time=6A1D1C32%P=x86_64-pc-linux-gnu%r(Gen
+SF:ericLines,42,"sh:\x20line\x201:\x20\r:\x20command\x20not\x20found\nsh:\
+SF:x20line\x202:\x20\r:\x20command\x20not\x20found\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 256 IP addresses (4 hosts up) scanned in 34.72 seconds
+Nmap done: 1 IP address (1 host up) scanned in 11.46 seconds
                                                                                                                                  
 ┌──(kali㉿kali)-[~]
-└─$ 
-
-msfadmin@metasploitable:~$ sudo iptables -L -n -v
-[sudo] password for msfadmin: 
-Chain INPUT (policy ACCEPT 9473 packets, 801K bytes)
- pkts bytes target     prot opt in     out     source               destination         
-
-Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
- pkts bytes target     prot opt in     out     source               destination         
-
-Chain OUTPUT (policy ACCEPT 9353 packets, 767K bytes)
- pkts bytes target     prot opt in     out     source               destination         
-msfadmin@metasploitable:~$ 
-
+└─$ telnet 10.30.0.235 6200
+Trying 10.30.0.235...
+telnet: Unable to connect to remote host: Connection refused
