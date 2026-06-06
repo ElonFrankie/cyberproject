@@ -1,19 +1,12 @@
-
-Nmap scan report for 10.30.0.250
-Host is up (0.0038s latency).
-Not shown: 1022 closed tcp ports (conn-refused)
-PORT     STATE SERVICE
-2222/tcp open  EtherNetIP-1
-8080/tcp open  http-proxy
-
-
-
-
-sudo hydra -t 4 -l gazelle -P /usr/share/wordlists/fasttrack.txt 10.30.0.250 ssh 
-
 Hydra v9.7 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-06-06 07:54:24
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-06-06 08:03:27
 [DATA] max 4 tasks per 1 server, overall 4 tasks, 262 login tries (l:1/p:262), ~66 tries per task
-[DATA] attacking ssh://10.30.0.250:22/
-[ERROR] could not connect to ssh://10.30.0.250:22 - Connection refused
+[DATA] attacking ssh://10.30.0.250:2222/
+[ERROR] all children were disabled due too many connection errors
+0 of 1 target completed, 0 valid password found
+[INFO] Writing restore file because 2 server scans could not be completed
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+[ERROR] 1 target was disabled because of too many errors
+[ERROR] 1 targets did not complete
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-06-06 08:04:05
